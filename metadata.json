@@ -1,0 +1,6 @@
+{
+  "name": "Reflect Journaling Companion",
+  "description": "An empathetic, insightful, and grounded journaling companion and reflection coach powered by Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

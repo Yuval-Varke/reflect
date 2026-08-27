@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "User": {
+      "path": "users/{userId}",
+      "description": "User profile and preferences",
+      "fields": {
+        "id": { "type": "string", "description": "User UID" },
+        "createdAt": { "type": "number", "description": "Timestamp of account creation" },
+        "lastActiveAt": { "type": "number", "description": "Last active timestamp" }
+      }
+    },
+    "JournalEntry": {
+      "path": "users/{userId}/entries/{entryId}",
+      "description": "Private reflective journal entries and coaching threads",
+      "fields": {
+        "id": { "type": "string", "description": "Entry document identifier" },
+        "userId": { "type": "string", "description": "UID of the owner user" },
+        "createdAt": { "type": "number", "description": "Creation timestamp in milliseconds" },
+        "updatedAt": { "type": "number", "description": "Last update timestamp in milliseconds" },
+        "userPrompt": { "type": "string", "description": "User journal reflection text" },
+        "reflectionReply": { "type": "string", "description": "Coach analysis and guiding question" },
+        "metadata": { "type": "map", "description": "Session title, dominant mood, tags, and summary" },
+        "thread": { "type": "list", "description": "Conversational follow-up messages" },
+        "bookmarked": { "type": "boolean", "description": "Whether entry is marked as favorite" }
+      }
+    }
+  }
+}
